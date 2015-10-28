@@ -36,7 +36,7 @@ describe Person do
     end
   end
 
-  describe "#age" do
+  describe "#cash" do
     it "should return the correct cash_balance" do
       expect(@person.cash).to eql 100000
     end
