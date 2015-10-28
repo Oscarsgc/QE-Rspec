@@ -1,3 +1,4 @@
+
 require './insufficient_funds_exception'
 class Account 
 	attr_accessor :balance, :minimumBalance
