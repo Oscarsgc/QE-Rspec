@@ -15,7 +15,7 @@ describe Person do
 
   describe "#name" do
     it "returns the correct name" do
-      @person.first_name.should eql "Oscarr"
+      @person.first_name.should eql "Oscar"
     end
   end
 

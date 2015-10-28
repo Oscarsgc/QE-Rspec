@@ -1,7 +1,7 @@
 
 require './insufficient_funds_exception'
 class Account 
-	attr_accessor :balance, :minimumBalance
+	attr_accessor :balance, :minimum_balance
 
 	def initialize
 		@minimum_balance = 10.0
@@ -17,17 +17,9 @@ class Account
 
 	def transfer_funds(destination, amount)
 		if @balance - amount < minimumBalance
-			raise new InsufficientFundsException
+			raise 'InsufficientFundsException'
 		end
 		destination.deposit(amount)
 		self.withdraw(amount)
 	end
-
-	def balance
-		@balance
-	end
-
-	def minimum_balance
-		@minimum_balance
-	end	
 end
