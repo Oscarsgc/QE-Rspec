@@ -16,10 +16,6 @@ class Person
 		@first_name + " " + @last_name
 	end
 
-	def get_cash_balance
-		@cash
-	end
-
 	def buy_car(fcost)
 		@cash = @cash + fcost
 		if @cash >= 0

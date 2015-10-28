@@ -16,19 +16,19 @@ describe Account do
 
 	describe '#minimum_balance' do
 		it "account is created and default balance is 10" do
-			@account.minimum_balance.should eql 10.0
+			expect(@account.minimum_balance).to eql 10.0
 		end
 
 		it "reads a minimum_balance and returns it" do
 			@account.minimum_balance = 30.0
-			@account.minimum_balance.should eql 30.0
+			expect(@account.minimum_balance).to eql 30.0
 		end
 	end
 
 	describe '#balance' do
 		it "reads a balance and returns it" do
 			@account.balance = 20.0
-			@account.balance.should eql 20.0
+			expect(@account.balance).to eql 20.0
 		end
 	end
 
@@ -36,7 +36,7 @@ describe Account do
 		it "adds a given ammount to the balance" do
 			@account.balance = 20.0
 			@account.deposit(10.0)
-			@account.balance.should eql 30.0
+			expect(@account.balance).to eql 30.0
 		end
 	end
 
@@ -44,7 +44,7 @@ describe Account do
 		it "subtracts a given ammount from the balance" do
 			@account.balance = 20.0
 			@account.withdraw(10.0)
-			@account.balance.should eql 10.0
+			expect(@account.balance).to eql 10.0
 		end
 	end
 
