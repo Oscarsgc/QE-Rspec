@@ -10,7 +10,7 @@ describe Account do
 	describe '#balance' do
 		it "reads a balance and returns it" do
 			@account.balance=20
-			@account.balance.should eql 20
+			expect(@account.balance).to eql 20
 		end
 	end
 

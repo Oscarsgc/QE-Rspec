@@ -5,7 +5,7 @@ class Discount
 	def calculate_discount(sales_amount)
 		discount_price = 0.0
 		if sales_amount == 0 || sales_amount < 0
-			raise new ArgumentException("Sales Amount should not be 'Zero/Negative'")
+			raise new RuntimeError("Sales Amount should not be 'Zero/Negative'")
 		else
 			if sales_amount >= 1000 && sales_amount < 2000
 				discount_price = sales_amount - (sales_amount * 0.05)

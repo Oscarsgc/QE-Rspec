@@ -7,6 +7,7 @@ class Person
 		@age = age
 		@cash = 100000
   end
+ 
 
   def self.initializer
     new("","",1)

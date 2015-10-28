@@ -9,7 +9,7 @@ describe Person do
 
   describe "#new" do
     before do
-      @person = Person.new
+      @person = Person.initializer
     end
 
     it "empty constructor returns a Person object" do
@@ -32,7 +32,9 @@ describe Person do
 
   describe "#name" do
     it "returns the correct name" do
-      @person.first_name.should eql "Oscar"
+      expect(@person.first_name).to eql "Oscar"
+    end
+  end
   describe "#age" do
     it "should return the correct age" do
       expect(@person.age).to eql 22
