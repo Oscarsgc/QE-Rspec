@@ -15,11 +15,9 @@ describe Discount do
   end
 
   describe "#calculate_discount" do
-    # it "if sales ammount is less than or equal to 0 argument error raised" do
-      
-    #   expect( @discount.calculate_discount(0) ).to raise_error(RuntimeError,"Sales Amount should not be 'Zero/Negative'")
-
-    # end
+     it "if sales ammount is less than or equal to 0 argument error raised" do
+       expect{@discount.calculate_discount(0)}.to raise_error(ArgumentError, "Sales Amount should not be 'Zero/Negative'")
+     end
 
     it  "if sales ammount is greater than 0 and between 1000 and 2000" do
       expect(@discount.calculate_discount(1000)).to eq 950

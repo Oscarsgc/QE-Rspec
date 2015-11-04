@@ -48,12 +48,26 @@ describe Account do
 		end
 	end
 
-	# describe '#transfer_funds' do
-	# 	it 'shows an "InsufficientFundsExeption" when the difference between balance and a given ammount is less than the minimum balance' do
-	# 		@ccount.balance = 15.0
-	# 		@account.transfer_funds()
-	# 		expect { raise "oops" }.to raise_error
-	# 	end
+  describe '#transfer_funds' do
+		it 'shows an "InsufficientFundsException" when the difference between balance and a given ammount is less than the minimum balance' do
+	 		@account.deposit(25.0)
+      @auxiliar_account = Account.new
+	 		expect {@account.transfer_funds(@auxiliar_account, 20)}.to raise_error(InsufficientFundsException)
+    end
+
+    it 'should show correct balance after doing a correct deposit in the origin account' do
+      @account.deposit(50.0)
+      @auxiliar_account = Account.new
+      @account.transfer_funds(@auxiliar_account,20.0)
+      expect(@account.balance).to eql 30.0
+    end
+    it 'should show correct balance after doing a correct deposit in the destination account' do
+      @account.deposit(55.0)
+      @auxiliar_account = Account.new
+      @account.transfer_funds(@auxiliar_account, 20.0)
+      expect(@auxiliar_account.balance).to eq 20.0
+    end
+  end
 
 	# end
 end

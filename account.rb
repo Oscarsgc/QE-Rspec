@@ -5,6 +5,7 @@ class Account
 
 	def initialize
 		@minimum_balance = 10.0
+    @balance = 0.0
 	end
 
 	def deposit(amount)
@@ -16,8 +17,8 @@ class Account
 	end
 
 	def transfer_funds(destination, amount)
-		if @balance - amount < minimumBalance
-			raise 'InsufficientFundsException'
+		if (@balance - amount) < @minimum_balance
+			raise InsufficientFundsException
 		end
 		destination.deposit(amount)
 		self.withdraw(amount)
