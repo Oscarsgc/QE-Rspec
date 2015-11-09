@@ -1,6 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    builder (3.2.2)
+    ci_reporter (2.0.0)
+      builder (>= 2.1.2)
+    ci_reporter_rspec (1.0.0)
+      ci_reporter (~> 2.0)
+      rspec (>= 2.14, < 4)
     diff-lcs (1.2.5)
     docile (1.1.5)
     json (1.8.3)
@@ -25,14 +31,18 @@ GEM
     simplecov-json (0.2)
       json
       simplecov
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  ci_reporter_rspec
   rspec
   simplecov
   simplecov-json
+  simplecov-rcov
 
 BUNDLED WITH
    1.10.6
