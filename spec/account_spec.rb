@@ -68,6 +68,4 @@ describe Account do
       expect(@auxiliar_account.balance).to eq 20.0
     end
   end
-
-	# end
 end

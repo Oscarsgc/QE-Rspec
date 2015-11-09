@@ -1,10 +1,9 @@
 class Discount 
 	def initialize		
-	end
+  end
 
 	def calculate_discount(sales_amount)
 		discount_price = 0.0
-
 		if sales_amount == 0 || sales_amount < 0
 			raise ArgumentError.new("Sales Amount should not be 'Zero/Negative'")
 		else

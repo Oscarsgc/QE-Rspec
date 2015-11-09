@@ -8,7 +8,6 @@ describe Discount do
   end
 
   describe "#new" do
-
     it "empty constructor returns a Discount object" do
       expect(@discount).to be_a Discount
     end
@@ -34,9 +33,5 @@ describe Discount do
     it  "if sales ammount is greater than 0 and between 1000 and 2000" do
       expect(@discount.calculate_discount(20001)).to eq 20001.0
     end
-
   end
-
-
-
 end
