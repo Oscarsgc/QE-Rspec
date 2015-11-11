@@ -36,7 +36,7 @@ describe Account do
 		it "adds a given ammount to the balance" do
 			@account.balance = 20.0
 			@account.deposit(10.0)
-			expect(@account.balance).to eql 22.0#30.0
+			expect(@account.balance).to eql 30.0
 		end
 	end
 
