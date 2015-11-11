@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="24" failures="0" errors="0" time="0.007242" timestamp="2015-11-11T18:06:25-04:00">
-  <!-- Randomized with seed 7343 -->
+<testsuite name="rspec" tests="24" failures="1" errors="0" time="0.017754" timestamp="2015-11-11T18:27:53-04:00">
+  <!-- Randomized with seed 26207 -->
   <properties/>
-  <testcase classname="spec.account_spec" name="Account#balance reads a balance and returns it" file="./spec/account_spec.rb" time="0.000814"/>
-  <testcase classname="spec.account_spec" name="Account#minimum_balance account is created and default balance is 10" file="./spec/account_spec.rb" time="0.000112"/>
-  <testcase classname="spec.account_spec" name="Account#minimum_balance reads a minimum_balance and returns it" file="./spec/account_spec.rb" time="0.000058"/>
-  <testcase classname="spec.account_spec" name="Account#balance reads a balance and returns it" file="./spec/account_spec.rb" time="0.000059"/>
-  <testcase classname="spec.account_spec" name="Account#deposit adds a given ammount to the balance" file="./spec/account_spec.rb" time="0.000058"/>
-  <testcase classname="spec.account_spec" name="Account#withdraw subtracts a given ammount from the balance" file="./spec/account_spec.rb" time="0.000071"/>
-  <testcase classname="spec.account_spec" name="Account#transfer_funds shows an &quot;InsufficientFundsException&quot; when the difference between balance and a given ammount is less than the minimum balance" file="./spec/account_spec.rb" time="0.001488"/>
-  <testcase classname="spec.account_spec" name="Account#transfer_funds should show correct balance after doing a correct deposit in the origin account" file="./spec/account_spec.rb" time="0.000169"/>
-  <testcase classname="spec.account_spec" name="Account#transfer_funds should show correct balance after doing a correct deposit in the destination account" file="./spec/account_spec.rb" time="0.000638"/>
-  <testcase classname="spec.discount_spec" name="Discount#new empty constructor returns a Discount object" file="./spec/discount_spec.rb" time="0.000624"/>
-  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is less than or equal to 0 argument error raised" file="./spec/discount_spec.rb" time="0.000123"/>
-  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000076"/>
-  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000096"/>
-  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000064"/>
-  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000108"/>
-  <testcase classname="spec.person_spec" name="Person#new empty constructor returns a Person object" file="./spec/person_spec.rb" time="0.000111"/>
-  <testcase classname="spec.person_spec" name="Person#first_name should return the correct name" file="./spec/person_spec.rb" time="0.000122"/>
-  <testcase classname="spec.person_spec" name="Person#last_name should return the correct name" file="./spec/person_spec.rb" time="0.000077"/>
-  <testcase classname="spec.person_spec" name="Person#name returns the correct name" file="./spec/person_spec.rb" time="0.000069"/>
-  <testcase classname="spec.person_spec" name="Person#age should return the correct age" file="./spec/person_spec.rb" time="0.000098"/>
-  <testcase classname="spec.person_spec" name="Person#cash should return the correct cash_balance" file="./spec/person_spec.rb" time="0.000056"/>
-  <testcase classname="spec.person_spec" name="Person#full_name should return the full name" file="./spec/person_spec.rb" time="0.000058"/>
-  <testcase classname="spec.person_spec" name="Person#buy_car should let me buy a car" file="./spec/person_spec.rb" time="0.000073"/>
-  <testcase classname="spec.person_spec" name="Person#buy_car shouldn't let me buy a car" file="./spec/person_spec.rb" time="0.000052"/>
+  <testcase classname="spec.account_spec" name="Account#balance reads a balance and returns it" file="./spec/account_spec.rb" time="0.000406"/>
+  <testcase classname="spec.account_spec" name="Account#minimum_balance account is created and default balance is 10" file="./spec/account_spec.rb" time="0.000063"/>
+  <testcase classname="spec.account_spec" name="Account#minimum_balance reads a minimum_balance and returns it" file="./spec/account_spec.rb" time="0.000053"/>
+  <testcase classname="spec.account_spec" name="Account#balance reads a balance and returns it" file="./spec/account_spec.rb" time="0.000050"/>
+  <testcase classname="spec.account_spec" name="Account#deposit adds a given ammount to the balance" file="./spec/account_spec.rb" time="0.012693">
+    <failure message="&#10;expected: 22.0&#10;     got: 30.0&#10;&#10;(compared using eql?)&#10;" type="RSpec::Expectations::ExpectationNotMetError">
+      <![CDATA[
+expected: 22.0
+     got: 30.0
+
+(compared using eql?)
+
+./spec/account_spec.rb:39:in `block (3 levels) in <top (required)>']]>
+    </failure>
+  </testcase>
+  <testcase classname="spec.account_spec" name="Account#withdraw subtracts a given ammount from the balance" file="./spec/account_spec.rb" time="0.000133"/>
+  <testcase classname="spec.account_spec" name="Account#transfer_funds shows an &quot;InsufficientFundsException&quot; when the difference between balance and a given ammount is less than the minimum balance" file="./spec/account_spec.rb" time="0.000947"/>
+  <testcase classname="spec.account_spec" name="Account#transfer_funds should show correct balance after doing a correct deposit in the origin account" file="./spec/account_spec.rb" time="0.000077"/>
+  <testcase classname="spec.account_spec" name="Account#transfer_funds should show correct balance after doing a correct deposit in the destination account" file="./spec/account_spec.rb" time="0.000351"/>
+  <testcase classname="spec.discount_spec" name="Discount#new empty constructor returns a Discount object" file="./spec/discount_spec.rb" time="0.000298"/>
+  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is less than or equal to 0 argument error raised" file="./spec/discount_spec.rb" time="0.000106"/>
+  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000081"/>
+  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000058"/>
+  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000048"/>
+  <testcase classname="spec.discount_spec" name="Discount#calculate_discount if sales ammount is greater than 0 and between 1000 and 2000" file="./spec/discount_spec.rb" time="0.000049"/>
+  <testcase classname="spec.person_spec" name="Person#new empty constructor returns a Person object" file="./spec/person_spec.rb" time="0.000099"/>
+  <testcase classname="spec.person_spec" name="Person#first_name should return the correct name" file="./spec/person_spec.rb" time="0.000057"/>
+  <testcase classname="spec.person_spec" name="Person#last_name should return the correct name" file="./spec/person_spec.rb" time="0.000063"/>
+  <testcase classname="spec.person_spec" name="Person#name returns the correct name" file="./spec/person_spec.rb" time="0.000059"/>
+  <testcase classname="spec.person_spec" name="Person#age should return the correct age" file="./spec/person_spec.rb" time="0.000074"/>
+  <testcase classname="spec.person_spec" name="Person#cash should return the correct cash_balance" file="./spec/person_spec.rb" time="0.000063"/>
+  <testcase classname="spec.person_spec" name="Person#full_name should return the full name" file="./spec/person_spec.rb" time="0.000065"/>
+  <testcase classname="spec.person_spec" name="Person#buy_car should let me buy a car" file="./spec/person_spec.rb" time="0.000056"/>
+  <testcase classname="spec.person_spec" name="Person#buy_car shouldn't let me buy a car" file="./spec/person_spec.rb" time="0.000051"/>
 </testsuite>
